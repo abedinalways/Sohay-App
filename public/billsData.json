@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "bill_type": "electricity",
+    "icon": "https://i.ibb.co.com/BHpBV7rS/DESCO.png",
+    "organization": "DESCO",
+    "amount": 5720,
+    "due_date": "2025-05-15"
+  },
+  {
+    "id": 2,
+    "bill_type": "electricity",
+    "icon": "https://i.ibb.co.com/XkKmj4bR/NESCO.png",
+    "organization": "NESCO",
+    "amount": 1980,
+    "due_date": "2025-05-20"
+  },
+  {
+    "id": 3,
+    "bill_type": "electricity",
+    "icon": "https://i.ibb.co.com/twYDrjwK/wapda.png",
+    "organization": "WAPDA",
+    "amount": 2120,
+    "due_date": "2025-05-22"
+  },
+  {
+    "id": 4,
+    "bill_type": "electricity",
+    "icon": "https://i.ibb.co.com/xtNqhWTs/BWBDpng.png",
+    "organization": "PDB",
+    "amount": 1850,
+    "due_date": "2025-05-18"
+  },
+  {
+    "id": 5,
+    "bill_type": "gas",
+    "icon": "https://i.ibb.co.com/zH4JCP8k/titas-gas.png",
+    "organization": "Tista",
+    "amount": 1450,
+    "due_date": "2025-05-19"
+  },
+  {
+    "id": 6,
+    "bill_type": "gas",
+    "icon": "https://i.ibb.co.com/bjLdjKbK/bakhrabad.jpg",
+    "organization": "Bakhrabad",
+    "amount": 1525,
+    "due_date": "2025-05-21"
+  },
+  {
+    "id": 7,
+    "bill_type": "internet",
+    "icon": "https://i.ibb.co.com/pB0DhZrF/logo-dark.png",
+    "organization": "Link3",
+    "amount": 1200,
+    "due_date": "2025-05-10"
+  },
+  {
+    "id": 8,
+    "bill_type": "internet",
+    "icon": "https://i.ibb.co.com/RG3Dk7hT/BTCL.png",
+    "organization": "BTCL",
+    "amount": 1250,
+    "due_date": "2025-05-16"
+  },
+  {
+    "id": 9,
+    "bill_type": "water",
+    "icon": "https://i.ibb.co.com/zTXHQB99/wasa.png",
+    "organization": "WASA",
+    "amount": 880,
+    "due_date": "2025-05-17"
+  },
+  {
+    "id": 10,
+    "bill_type": "credit card bill",
+    "icon": "https://i.ibb.co.com/6RcDCTKL/city-bank.png",
+    "organization": "City Bank",
+    "amount": 6200,
+    "due_date": "2025-05-23"
+  },
+  {
+    "id": 11,
+    "bill_type": "credit card bill",
+    "icon": "https://i.ibb.co.com/4ZFMCNrk/brac-bank.png",
+    "organization": "BRAC Bank",
+    "amount": 4300,
+    "due_date": "2025-05-19"
+  },
+  {
+    "id": 12,
+    "bill_type": "credit card bill",
+    "icon": "https://i.ibb.co.com/QwJKjJj/dutch-bangla-bank.png",
+    "organization": "Dutch Bangla Bank",
+    "amount": 5700,
+    "due_date": "2025-05-21"
+  },
+  {
+    "id": 13,
+    "bill_type": "tuition",
+    "icon": "https://i.ibb.co.com/y3kdxgS/rupali-bank.png",
+    "organization": "Rupali Bank PLC",
+    "amount": 4800,
+    "due_date": "2025-05-13"
+  },
+  {
+    "id": 14,
+    "bill_type": "tuition",
+    "icon": "https://i.ibb.co.com/rR63CgdL/sonali-bank.png",
+    "organization": "Sonali Bank PLC",
+    "amount": 5100,
+    "due_date": "2025-05-15"
+  },
+  {
+    "id": 15,
+    "bill_type": "tuition",
+    "icon": "https://i.ibb.co.com/PsCBm74s/janata-bank.png",
+    "organization": "Janata Bank PLC",
+    "amount": 5400,
+    "due_date": "2025-05-18"
+  },
+  {
+    "id": 16,
+    "bill_type": "tuition",
+    "icon": "https://i.ibb.co.com/tpZhQFzz/agrani-bank.png",
+    "organization": "Agrani Bank PLC",
+    "amount": 4700,
+    "due_date": "2025-05-20"
+  }
+]
