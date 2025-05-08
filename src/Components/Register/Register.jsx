@@ -1,16 +1,18 @@
 import React, { use, useEffect, useState } from 'react';
 import { BiUser } from 'react-icons/bi';
+import { FcGoogle } from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { AuthContext } from '../../Context/AuthContext';
 import { auth } from '../../Firebase/Firebase.init';
 import { updateProfile } from 'firebase/auth';
+import toast from 'react-hot-toast';
+
 
 const Register = () => {
-  const {createUser, user} = use(AuthContext);
+  const { createUser, user, googleSignIn } = use(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [success, setSuccess] = useState(false);
+  const [passwordError, setPasswordError] = useState('');
   const navigate = useNavigate();
   useEffect(() => {
     if (user) {
@@ -24,42 +26,64 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     const terms = e.target.terms.checked;
-    console.log(name, email, password, photoURL, terms);
-    setErrorMessage('');
-    setSuccess(false);
+    setPasswordError('');
     if (!terms) {
-      setErrorMessage('please accept our terms & conditions');
+      toast.error('please accept our terms & conditions');
       return;
     }
     // password verify
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
-    if (passwordRegex.test(password) === false) {
-      setErrorMessage('Password must be at least 8 characters long, one lowercase/uppercase letter or one number and least one special character (like !@#$%)');
-      return;
-    }
+    const validatePassword = password => {
+      if (password.length < 6) {
+        return 'Password must be at least 6 characters long.';
+      }
+      if (!/[a-z]/.test(password)) {
+        return 'Password must contain at least one lowercase letter.';
+      }
+      if (!/[A-Z]/.test(password)) {
+        return 'Password must contain at least one uppercase letter.';
+      }
+      return '';
+    };
+     
+     const passwordValidationError = validatePassword(password);
+     if (passwordValidationError) {
+       setPasswordError(passwordValidationError);
+       return;
+     }
+
     //create user
     createUser(email, password).then(result => {
       console.log(result)
-      setSuccess(true)
-      setErrorMessage('')
+
       // get user profile
       updateProfile(auth.currentUser, {
         displayName: name,
         photoURL:photoURL,
       }).then(() => {
-            console.log('Profile updated');
+            toast.success('Registration successful!');
             navigate('/');
           })
           .catch((error) => {
-            setErrorMessage(error.message);
+            toast.error(error.message);
           });
     })
-      .catch(error => setErrorMessage(error.message))
-    
+      .catch(error => toast.error(error.message))
   }
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then(result => {
+        console.log('Logged in with Google:', result);
+        toast.success('Logged in with Google!');
+        navigate('/');
+      })
+      .catch(error => {
+        console.error('Google sign-in error:', error.message);
+        toast.error(error.message);
+      });
+  };
   return (
     <>
-      <div className="flex flex-col justify-center items-center mt-6 mx-auto relative">
+      <div className="flex flex-col justify-center items-center mt-6 mx-auto relative bg-base-200">
         <form
           onSubmit={handleRegister}
           className="fieldset bg-base-200 shadow-xl border-purple-200 rounded-box w-xs border p-4 mx-auto text-xs"
@@ -87,6 +111,7 @@ const Register = () => {
           />
 
           <label className="label font-semibold font-[Suse]">Email</label>
+
           <input
             required
             type="email"
@@ -95,27 +120,41 @@ const Register = () => {
             placeholder="Enter Your Email"
           />
           <label className="label font-semibold font-[Suse]">Password</label>
-          <input
-            required
-            type={showPassword ? 'text' : 'password'}
-            className="input"
-            name="password"
-            placeholder="Enter your Password"
-          />
-          <button
-            onClick={() => setShowPassword(!showPassword)}
-            className="btn btn-ghost absolute md:top-85 md:left-194 top-85 left-77"
-          >
-            {showPassword ? <FaEyeSlash className='text-purple-800'></FaEyeSlash> : <FaEye className='text-purple-800'></FaEye>}
-          </button>
+          <div className="relative">
+            <input
+              required
+              type={showPassword ? 'text' : 'password'}
+              className="input w-full pr-10"
+              name="password"
+              placeholder="Enter your Password"
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute inset-y-0 right-3 flex items-center px-2 text-purple-800"
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
+          </div>
           <button className="btn  bg-white text-purple-600 font-bold font-[sora] border-1 border-purple-300 rounded-md text-xl hover:bg-purple-600 hover:text-white mt-2 mb-2">
             Signup
           </button>
+          {passwordError && (
+            <p className="text-red-500 text-xs italic">{passwordError}</p>
+          )}
           <label className="label mt-1 font-bold text-purple-500 font-[Poppins]">
-            <input type="checkbox" className="checkbox" name="terms" />
+            <input type="checkbox" className="checkbox" name="terms" required />
             Accept Our Terms & Conditions
           </label>
-          <p className='font-[Poppins]'>
+          <div className="divider">OR</div>
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn btn-outline flex items-center"
+          >
+            <FcGoogle className="mr-2" /> Sign up with Google
+          </button>
+
+          <p className="mt-2 text-center font-[Poppins]">
             Already SingUp? Please{' '}
             <Link
               to="/login"
@@ -125,19 +164,6 @@ const Register = () => {
             </Link>
           </p>
         </form>
-      </div>
-      <div>
-        {errorMessage && (
-          <p className="text-red-600 font-bold flex justify-center">
-            {' '}
-            {errorMessage}{' '}
-          </p>
-        )}
-        {success && (
-          <p className="text-green-600 font-bold flex justify-center">
-            user created account successfully
-          </p>
-        )}
       </div>
     </>
   );
