@@ -1,5 +1,6 @@
 import React, { use, useRef} from 'react';
 import { BiUser } from 'react-icons/bi';
+import { FcGoogle } from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
 import toast, { Toaster } from 'react-hot-toast';
@@ -8,7 +9,7 @@ import { auth } from '../../Firebase/Firebase.init';
 
 const Login = () => {
   const emailRef = useRef();
-  const { signInUser } = use(AuthContext);
+  const { signInUser, googleSignIn } = use(AuthContext);
   const navigate = useNavigate();
   const handleLogin = e => {
     e.preventDefault();
@@ -33,6 +34,20 @@ const Login = () => {
       toast.error(error.message)
     })
   }
+  
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then(result => {
+        console.log(result);
+        toast.success('Logged in with Google successfully!');
+        navigate('/bills');
+      })
+      .catch(error => {
+        console.error('Error signing in with Google:', error);
+        toast.error(error.message);
+      });
+  };
+
   return (
     <div className="flex flex-col justify-center items-center mt-6 mx-auto">
       <Toaster/>
@@ -57,7 +72,13 @@ const Login = () => {
           Forgot password?
         </div>
         <button className='btn  bg-white text-purple-600 font-bold font-[sora] border-1 border-purple-300 rounded-md text-xl hover:bg-purple-600 hover:text-white mt-2 mb-2'>Login</button>
-
+        <div className="divider text-purple-600">OR</div>
+        <button
+          onClick={handleGoogleSignIn}
+          className="btn border border-purple-400 flex items-center text-purple-600 hover:text-white hover:bg-purple-600"
+        >
+          <FcGoogle className="mr-2" size='24px' /> Sign in with Google
+        </button>
         <p>
           Don't have an account? Please{' '}
           <Link to="/register" className="font-[Poppins] font-bold text-purple-600 underline">
