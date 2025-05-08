@@ -1,12 +1,61 @@
-# React + Vite
+# 💳 Sohay - Mobile Banking Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Sohay** is a modern, user-friendly mobile banking Single Page Application (SPA) that brings essential and advanced banking services to your fingertips. From seamless bill payments to micro-credit services, Sohay empowers users—especially in rural and semi-urban areas—with easy, fast, and secure digital financial transactions.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+🔗 [Live Site](https://sohay-auth.web.app/)  
+*(Replace with your deployed site URL)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ Send Money Instantly  
+- ✅ Bill Payment (Utility, Internet, etc.)  
+- ✅ Mobile Recharge (All operators)  
+- ✅ Cash Out & Easy Withdraw  
+- ✅ Micro Credit Access  
+- ✅ Secure Authentication (via Firebase)  
+- ✅ Responsive Design for All Devices  
+- ✅ Smooth Animations & Modern UI  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework**: [React JS](https://reactjs.org)  
+- **Styling**: [Tailwind CSS](https://tailwindcss.com), [DaisyUI](https://daisyui.com)  
+- **Animations**: [Motion JS](https://motion.dev), [Swiper JS](https://swiperjs.com)  
+- **Icons**: [React Icons](https://react-icons.github.io), [Lucide Icons](https://lucide.dev)  
+- **Routing**: [React Router DOM](https://reactrouter.com)  
+- **Authentication**: [Firebase Authentication](https://firebase.google.com/products/auth)
+
+---
+
+## 🔒 Authentication & Security
+
+- Email/Password Authentication (via Firebase)
+- Route Protection for secure user navigation
+- Form validation and error handling
+
+---
+
+## 📱 UI & UX Highlights
+
+- Fully responsive layout  
+- Interactive sliders and transitions  
+- Clean, minimalist design inspired by real-world fintech apps  
+- Easy navigation across all modules
+
+---
+
+## 📂 Folder Structure Overview
+
+```plaintext
+/src
+  ├── assets/
+  ├── components/
+  ├── pages/
+  ├── routes/
+  ├── hooks/
+  └── firebase/
