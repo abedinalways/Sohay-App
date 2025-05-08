@@ -9,11 +9,13 @@ import Profile from '../Pages/Profile/Profile';
 import PayBills from '../Pages/PayBills/PayBills';
 import Bills from '../Components/Bills/Bills';
 import UpdateProfile from '../Components/UpdateProfile/UpdateProfile';
+import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     Component: Root,
+    errorElement:<ErrorPage/>,
     children: [
       {
         index: true,
@@ -37,6 +39,7 @@ const router = createBrowserRouter([
         hydrateFallbackElement: (
           <span className="loading loading-ball loading-xs"></span>
         ),
+        errorElement: <ErrorPage/>,
         loader: () => fetch('../billsData.json'),
         Component: PayBills,
       },

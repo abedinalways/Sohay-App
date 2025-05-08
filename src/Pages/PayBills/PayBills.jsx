@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLoaderData, useParams, useNavigate } from 'react-router';
 import { addPaidBill, getBalance, isBillPaid, setBalance } from '../../Utilities/localStorage';
 import toast, { Toaster } from 'react-hot-toast';
+import ErrorPage from '../ErrorPage/ErrorPage';
 
 const PayBills = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const PayBills = () => {
   const clickDetails = data.find(billData => billData.id === clickBtn);
   const [, setPaymentMade] = useState(false);
   if (!clickDetails) {
-    return 'error';
+    return <ErrorPage/>;
   }
   const { bill_type, icon, organization, amount, due_date, id: billUniqueId} = clickDetails || {};
   const handlePayBill = () => {
@@ -38,7 +39,7 @@ const PayBills = () => {
   };
   const paid = isBillPaid(billUniqueId);
   return (
-    <div className="card shadow-lg w-86 mx-auto border border-purple-400 mt-10">
+    <div className="card shadow-lg w-86 mx-auto border border-purple-400 mt-10 mb-4">
       <figure className=" mx-auto pt-10 w-45">
         <img
           src={icon}
