@@ -1,6 +1,6 @@
 import React, { use, useEffect, useSyncExternalStore } from 'react';
-
-import { Link, NavLink } from 'react-router';
+import { IoIosArrowDropdownCircle } from 'react-icons/io';
+import { NavLink } from 'react-router';
 import { SiFampay } from 'react-icons/si';
 import { FaHome } from 'react-icons/fa';
 import { FaAmazonPay } from 'react-icons/fa6';
@@ -25,9 +25,9 @@ const Navbar = () => {
   }
   const nav = (
     <>
-      <NavLink to="/" className={({ isActive }) =>isActive ? 'text-blue-600 font-bold underline' : ''}> <ul className='menu menu-horizontal px-1'><li className="px-4 list-none"><span><FaHome />Home</span></li></ul></NavLink>
-      <NavLink to="/bills" className={({ isActive }) =>isActive ? 'text-blue-600 font-bold underline' : ''}> <ul className='menu menu-horizontal'><li className="px-4 list-none"><span><FaAmazonPay />Bills</span></li></ul></NavLink>
-      <NavLink to="/profile" className={({ isActive }) =>isActive ? 'text-blue-600 font-bold underline' : ''}> <ul className='menu menu-horizontal'><li className="px-4 list-none"><span><CgProfile />Profile</span></li></ul></NavLink>
+      <NavLink to="/" className={({ isActive }) =>isActive ? ' text-purple-900 font-bold underline' : ''}> <ul className='menu menu-horizontal px-1'><li className="px-4 list-none"><span><FaHome />Home</span></li></ul></NavLink>
+      <NavLink to="/bills" className={({ isActive }) =>isActive ? 'text-purple-900 font-bold underline' : ''}> <ul className='menu menu-horizontal'><li className="px-4 list-none"><span><FaAmazonPay />Bills</span></li></ul></NavLink>
+      <NavLink to="/profile" className={({ isActive }) =>isActive ? 'text-purple-900  font-bold underline' : ''}> <ul className='menu menu-horizontal'><li className="px-4 list-none"><span><CgProfile />Profile</span></li></ul></NavLink>
      
     </>
   );
@@ -50,13 +50,24 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-start flex items-center mx-10">
-        <div className="dropdown lg:hidden"></div>
+        <div className="dropdown md:hidden">
+          <div className="dropdown dropdown-hover">
+            <div tabIndex={0} role="button" className="btn m-1">
+              <IoIosArrowDropdownCircle />
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+              {nav}
+            </ul>
+          </div>
+        </div>
         <h1 className="font-[sora] font-bold text-2xl flex items-center-safe text-purple-900">
-          
           <SiFampay size="30px" />
-          
+
           <span className="text-red-600">S</span>
-          <span className="text-green-800">o</span><span>hay</span>
+          <span className="text-green-800">o</span>
+          <span>hay</span>
         </h1>
       </div>
       <div className="navbar-center justify-center items-center gap-4 ">

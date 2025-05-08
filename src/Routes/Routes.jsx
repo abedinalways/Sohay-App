@@ -8,6 +8,7 @@ import PrivateRoute from './PrivateRoute';
 import Profile from '../Pages/Profile/Profile';
 import PayBills from '../Pages/PayBills/PayBills';
 import Bills from '../Components/Bills/Bills';
+import UpdateProfile from '../Components/UpdateProfile/UpdateProfile';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
           <span className="loading loading-ball loading-xs"></span>
         ),
         loader: () => fetch('../billsData.json'),
-        element: (<PrivateRoute><Bills/></PrivateRoute>) ,
+        element: (
+          <PrivateRoute>
+            <Bills />
+          </PrivateRoute>
+        ),
       },
       {
         path: '/payBills/:id',
@@ -33,13 +38,21 @@ const router = createBrowserRouter([
           <span className="loading loading-ball loading-xs"></span>
         ),
         loader: () => fetch('../billsData.json'),
-        Component:PayBills,
+        Component: PayBills,
       },
       {
         path: '/profile',
         element: (
           <PrivateRoute>
             <Profile />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: '/update-profile',
+        element: (
+          <PrivateRoute>
+            <UpdateProfile />
           </PrivateRoute>
         ),
       },
