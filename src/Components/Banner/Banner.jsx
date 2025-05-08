@@ -32,7 +32,7 @@ export default function Banner() {
 
       </Swiper>
       <div className='flex justify-center mt-3 mb-2 items-center'>
-        <button className='btn btn-wide bg-white text-purple-600 font-bold font-[sora] border-2 border-purple-300 rounded-2xl text-xl hover:bg-purple-600 hover:text-white py-6'>Learn More</button>
+        <button className='btn btn-wide bg-white text-purple-600 font-bold font-[sora] border-2 border-purple-300 rounded-md text-xl hover:bg-purple-600 hover:text-white py-6'>Learn More</button>
       </div>
     </div>
   );
