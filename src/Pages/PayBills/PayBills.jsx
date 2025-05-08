@@ -12,7 +12,7 @@ const PayBills = () => {
   const clickDetails = data.find(billData => billData.id === clickBtn);
   const [, setPaymentMade] = useState(false);
   if (!clickDetails) {
-    return <ErrorPage/>;
+    return (<ErrorPage/>);
   }
   const { bill_type, icon, organization, amount, due_date, id: billUniqueId} = clickDetails || {};
   const handlePayBill = () => {

@@ -7,10 +7,10 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { SiFampay } from 'react-icons/si';
 const Footer = () => {
   return (
-    <footer className="footer footer-horizontal footer-center bg-gray-100 text-black mt-2">
+    <footer className="footer footer-horizontal footer-center bg-gray-200 text-black">
       <div>
-        <h1 className="font-[sora] font-bold text-2xl flex items-center-safe text-purple-900">
-                  <SiFampay size="30px" />
+        <h1 className="font-[sora] font-bold text-lg flex items-center-safe text-purple-900">
+                  <SiFampay size="20px" />
         
                   <span className="text-red-600">S</span>
                   <span className="text-green-800">o</span>
@@ -83,7 +83,7 @@ const Footer = () => {
             <FaInstagram className="text-2xl text-red-500"></FaInstagram>
           </NavLink>
           <NavLink to="https://github.com/abedinalways" target="_blank">
-            <FaGithub className="text-2xl text-white"></FaGithub>
+            <FaGithub className="text-2xl text-black"></FaGithub>
           </NavLink>
           <NavLink
             to="https://www.linkedin.com/in/sheikh-minhajul-abedin-bb51162a4/"

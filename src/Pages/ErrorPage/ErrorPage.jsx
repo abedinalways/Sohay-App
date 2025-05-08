@@ -27,7 +27,7 @@ const ErrorPage = () => {
       </section>
       <div className="flex justify-center md:mr-40">
         <Link to={'/'}>
-          <button className='btn btn-link'>Go To HomePage</button>
+          <button className='btn btn-link border-purple-300 bg-white text-purple-600'>Go To HomePage</button>
         </Link>
       </div>
     </>

@@ -9,9 +9,9 @@ const Root = () => {
   return (
     <div>
       <Navbar></Navbar>
-      
+      <div>
       {state == 'loading' ? <Loader /> : <Outlet></Outlet>}
-      
+      </div>
       <Footer />
     </div>
   );

@@ -48,7 +48,7 @@ const nav = (
     </div>
   );
   return (
-    <div className="navbar sticky top-0 bg-gray-100 z-1">
+    <div className="navbar sticky top-0 bg-gray-200 z-100">
       <div className="navbar-start flex items-center mx-10">
         <div className="dropdown md:hidden">
           <div className="dropdown dropdown-hover">
