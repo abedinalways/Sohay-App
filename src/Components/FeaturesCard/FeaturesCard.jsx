@@ -1,7 +1,8 @@
 import React from 'react';
 import payment from '../../assets/payment.png'
 import recharge from '../../assets/Recharge.png'
-import send_money from '../../assets/send-money.png'
+import send_money from '../../assets/send_money.png'
+import cash_out from '../../assets/cash_out.png'
 const FeaturesCard = () => {
   return (
     <div className="bg-base-200 py-4 px-2 flex flex-col justify-center ">
@@ -65,7 +66,7 @@ const FeaturesCard = () => {
         </div>
         <div className="card bg-base-200 border border-purple-400 shadow-md w-70 h-100">
           <figure className="w-40 mx-auto rounded-full">
-            <img src={payment} className="rounded-xl" />
+            <img src={cash_out} className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title  text-2xl font-[Raleway] font-bold text-purple-900">
