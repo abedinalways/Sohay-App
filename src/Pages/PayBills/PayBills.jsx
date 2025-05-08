@@ -3,6 +3,7 @@ import { useLoaderData, useParams, useNavigate } from 'react-router';
 import { addPaidBill, getBalance, isBillPaid, setBalance } from '../../Utilities/localStorage';
 import toast, { Toaster } from 'react-hot-toast';
 import ErrorPage from '../ErrorPage/ErrorPage';
+import Error from '../ErrorPage/Error';
 
 const PayBills = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const PayBills = () => {
   const clickDetails = data.find(billData => billData.id === clickBtn);
   const [, setPaymentMade] = useState(false);
   if (!clickDetails) {
-    return (<ErrorPage/>);
+    return (<Error/>);
   }
   const { bill_type, icon, organization, amount, due_date, id: billUniqueId} = clickDetails || {};
   const handlePayBill = () => {
