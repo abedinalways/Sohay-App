@@ -13,7 +13,7 @@
     "@react-icons/all-files": "^4.1.0",
     "@tailwindcss/vite": "^4.1.5",
     "firebase": "^11.6.1",
-    "framer-motion": "^12.9.7",
+    "framer-motion": "^12.10.2",
     "lucide-react": "^0.507.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

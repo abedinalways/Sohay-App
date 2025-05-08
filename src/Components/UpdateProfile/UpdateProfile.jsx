@@ -30,7 +30,7 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center mt-10">
+    <div className="flex flex-col items-center justify-center mt-10 py-8 bg-base-200">
       <h2 className="text-2xl font-bold font-[sora] text-purple-800 mb-6">
         Update Information
       </h2>

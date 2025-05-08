@@ -49,7 +49,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center mt-6 mx-auto">
+    <div className="flex flex-col justify-center items-center mt-6 mx-auto bg-base-200">
       <Toaster/>
       <form onSubmit={handleLogin} className="fieldset bg-base-200 shadow-xl border-purple-200 rounded-box w-xs border p-4 mx-auto">
         <div className="p-2 flex flex-col justify-center items-center">

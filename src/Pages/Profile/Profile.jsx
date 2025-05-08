@@ -5,8 +5,8 @@ import { Link } from 'react-router';
 const Profile = () => {
   const { user } = use(AuthContext);
   return (
-    <>
-      <h2 className="text-2xl mt-12 font-bold font-[sora] text-center text-purple-800">
+    <div className='bg-base-200 py-8'>
+      <h2 className="text-2xl  font-bold font-[sora] text-center text-purple-800">
         User's Profile
       </h2>
       <div className="flex flex-col gap-4 justify-center items-center mt-20 w-90 mx-auto">
@@ -29,7 +29,7 @@ const Profile = () => {
           Update Information
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 

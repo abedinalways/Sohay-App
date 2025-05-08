@@ -23,7 +23,7 @@ const Navbar = () => {
       alert('Log Out Successfully')
     }).catch(error=>console.log(error))
   }
-  const nav = (
+const nav = (
     <>
       <NavLink to="/" className={({ isActive }) =>isActive ? ' text-purple-900 font-bold underline' : ''}> <ul className='menu menu-horizontal px-1'><li className="px-4 list-none"><span><FaHome />Home</span></li></ul></NavLink>
       <NavLink to="/bills" className={({ isActive }) =>isActive ? 'text-purple-900 font-bold underline' : ''}> <ul className='menu menu-horizontal'><li className="px-4 list-none"><span><FaAmazonPay />Bills</span></li></ul></NavLink>
@@ -48,7 +48,7 @@ const Navbar = () => {
     </div>
   );
   return (
-    <div className="navbar">
+    <div className="navbar sticky top-0 bg-gray-100 z-1">
       <div className="navbar-start flex items-center mx-10">
         <div className="dropdown md:hidden">
           <div className="dropdown dropdown-hover">
@@ -71,7 +71,7 @@ const Navbar = () => {
         </h1>
       </div>
       <div className="navbar-center justify-center items-center gap-4 ">
-        <div className="md:flex hidden">{nav}</div>
+        <div className="md:flex hidden text-xl">{nav}</div>
         <div className="md:hidden flex">{navEnd}</div>
       </div>
       <div className="navbar-end mx-20 md:flex hidden">{navEnd}</div>

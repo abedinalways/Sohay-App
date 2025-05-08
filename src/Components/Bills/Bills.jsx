@@ -12,7 +12,7 @@ const Bills = () => {
   return (
     <>
       <Toaster />
-      <div className='bg-base-300'>
+      <div className='bg-base-200'>
         <h2 className='text-2xl font-bold text-center text-purple-800'>My Bills</h2>
         <div className='md:px-10 px-4 mx-auto'>
           {data.map(bill => {
