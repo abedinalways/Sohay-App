@@ -4,7 +4,6 @@
 
 ## 🚀 Live Demo
 🔗 [Live Site](https://sohay-auth.web.app/)  
-*(Replace with your deployed site URL)*
 
 ---
 
