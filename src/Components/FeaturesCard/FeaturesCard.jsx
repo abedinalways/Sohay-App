@@ -9,7 +9,7 @@ const FeaturesCard = () => {
       <h2 className="text-center text-3xl text-purple-800 font-bold py-4 font-[sora]">
         One Platform for all Financial Solutions
       </h2>
-      <div className="grid md:grid-cols-4 grid-cols-1 justify-around items-center mx-auto gap-5">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-around items-center mx-auto gap-5">
         <div className="card bg-base-200 border border-purple-400 shadow-md w-70 h-100">
           <figure className="w-40 mx-auto rounded-full">
             <img src={payment} className="rounded-xl" />
