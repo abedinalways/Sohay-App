@@ -1,5 +1,5 @@
 import cash from '../../assets/cash.png';
-import Pay from '../../assets/PAY1.png';
+import Pay from '../../assets/PAY02.png';
 import bill from '../../assets/bill.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';

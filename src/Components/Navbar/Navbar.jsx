@@ -7,6 +7,7 @@ import { FaAmazonPay } from 'react-icons/fa6';
 import { CgProfile } from 'react-icons/cg';
 import { AuthContext } from '../../Context/AuthContext';
 import { clearLocalPaymentData, getBalance, setBalance, subscribeToBalance } from '../../Utilities/localStorage';
+import toast from 'react-hot-toast';
 const Navbar = () => {
   const { user, signOutUser } = use(AuthContext);
   const balance = useSyncExternalStore(subscribeToBalance, getBalance);
@@ -20,7 +21,7 @@ const Navbar = () => {
   const handleSignOut = () => {
     signOutUser().then(() => {
       clearLocalPaymentData();
-      alert('Log Out Successfully')
+      toast.success('Log Out Successfully')
     }).catch(error=>console.log(error))
   }
 const nav = (
