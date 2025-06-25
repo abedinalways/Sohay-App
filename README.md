@@ -1,63 +1,100 @@
-# 💳 Sohay - Mobile Banking Web App
+💳 Sohay – Mobile Banking Web App
+Sohay is a modern, secure, and user-friendly Single Page Application (SPA) designed to make mobile banking accessible to everyone, especially users in rural and semi-urban regions. It simplifies financial tasks like bill payments, money transfers, and micro-credit access through an intuitive and responsive interface.
 
-**Sohay** is a modern, user-friendly mobile banking Single Page Application (SPA) that brings essential and advanced banking services to your fingertips. From seamless bill payments to micro-credit services, Sohay empowers users—especially in rural and semi-urban areas—with easy, fast, and secure digital financial transactions.
+<p align="center"> <img src="https://github.com/abedinalways/Sohay-App/blob/main/sohay_app.png" alt="Sohay App Screenshot" width="100%" /> </p>
+🚀 Live Demo
+🔗 Visit Live Site
 
-<img src="https://github.com/abedinalways/Sohay-App/blob/main/sohay_app.png">
+✨ Key Features
+🔄 Instant Money Transfer
 
+📱 Mobile Recharge (All operators)
 
-## 🚀 Live Demo
-🔗 [Live Site](https://sohay-auth.web.app/)  
+💡 Utility & Internet Bill Payments
 
----
+💳 Micro Credit Access
 
-## ✨ Features
+🏧 Cash Out & Easy Withdraw
 
-- ✅ Send Money Instantly  
-- ✅ Bill Payment (Utility, Internet, etc.)  
-- ✅ Mobile Recharge (All operators)  
-- ✅ Cash Out & Easy Withdraw  
-- ✅ Micro Credit Access  
-- ✅ Secure Authentication (via Firebase)  
-- ✅ Responsive Design for All Devices  
-- ✅ Smooth Animations & Modern UI  
+🔐 Secure Login & Signup (Firebase Auth)
 
----
+📲 Fully Responsive Design
 
-## 🛠️ Tech Stack
+⚡ Smooth Transitions & Animations
 
-- **Frontend Framework**: [React JS](https://reactjs.org)  
-- **Styling**: [Tailwind CSS](https://tailwindcss.com), [DaisyUI](https://daisyui.com)  
-- **Animations**: [Motion JS](https://motion.dev), [Swiper JS](https://swiperjs.com)  
-- **Icons**: [React Icons](https://react-icons.github.io), [Lucide Icons](https://lucide.dev)  
-- **Routing**: [React Router DOM](https://reactrouter.com)  
-- **Authentication**: [Firebase Authentication](https://firebase.google.com/products/auth)
+🔒 Protected Routes & Error Handling
 
----
+🛠️ Core Technologies
+Category	Stack Used
+Frontend	React JS, React Router DOM
+Styling	Tailwind CSS, DaisyUI
+Animation	Motion JS, Swiper JS
+Icons	React Icons, Lucide Icons
+Auth	Firebase Authentication
+Hosting	Firebase
 
-## 🔒 Authentication & Security
+📦 Main Dependencies
+nginx
+Copy
+Edit
+react
+react-router-dom
+tailwindcss
+daisyui
+firebase
+framer-motion
+swiper
+react-icons
+lucide-react
+You can find all dependencies listed in the package.json file.
 
-- Email/Password Authentication (via Firebase)
-- Route Protection for secure user navigation
-- Form validation and error handling
+🧑‍💻 Getting Started Locally
+Follow these steps to run the project on your local machine:
 
----
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/abedinalways/Sohay-App.git
+cd Sohay-App
+2. Install Dependencies
+bash
+Copy
+Edit
+npm install
+3. Add Firebase Configuration
+Create a .env file in the root directory and add your Firebase credentials:
 
-## 📱 UI & UX Highlights
+env
+Copy
+Edit
+VITE_apiKey=your_api_key
+VITE_authDomain=your_project.firebaseapp.com
+VITE_projectId=your_project_id
+VITE_storageBucket=your_project.appspot.com
+VITE_messagingSenderId=your_sender_id
+VITE_appId=your_app_id
+📌 Make sure to enable Email/Password authentication in your Firebase console.
 
-- Fully responsive layout  
-- Interactive sliders and transitions  
-- Clean, minimalist design inspired by real-world fintech apps  
-- Easy navigation across all modules
+4. Start the Development Server
+bash
+Copy
+Edit
+npm run dev
+🌐 Relevant Links
+🔗 Live Site
 
----
+📁 Source Code
 
-## 📂 Folder Structure Overview
+📘 Firebase Auth Docs
 
-```plaintext
-/src
-  ├── assets/
-  ├── components/
-  ├── pages/
-  ├── routes/
-  ├── hooks/
-  └── firebase/
+🧩 React Router
+
+🖼️ UI/UX Highlights
+Clean and modern fintech-inspired UI
+
+Optimized for all screen sizes
+
+Interactive elements and smooth page transitions
+
+Accessible and minimalistic navigation
