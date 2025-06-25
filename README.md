@@ -65,16 +65,6 @@ cd Sohay-App
 npm install
 
 
-3. Firebase Configuration
-Create a .env file in the root directory and add your Firebase credentials:
-
-VITE_apiKey=AIzaSyA0R1pfl3syL0EnJ31LuXx3b3lcGOcBVUg
-VITE_authDomain=sohay-auth.firebaseapp.com
-VITE_projectId=sohay-auth
-VITE_storageBucket=sohay-auth.firebasestorage.app
-VITE_messagingSenderId=602271353444
-VITE_appId=1:602271353444:web:5eb55b00d3fd34ac722d71
-
 4. Start the Development Server
 npm run dev
 
