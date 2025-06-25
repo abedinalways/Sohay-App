@@ -2,6 +2,9 @@
 
 **Sohay** is a modern, user-friendly mobile banking Single Page Application (SPA) that brings essential and advanced banking services to your fingertips. From seamless bill payments to micro-credit services, Sohay empowers users—especially in rural and semi-urban areas—with easy, fast, and secure digital financial transactions.
 
+<img src="https://github.com/abedinalways/Sohay-App/blob/main/sohay_app.png">
+
+
 ## 🚀 Live Demo
 🔗 [Live Site](https://sohay-auth.web.app/)  
 
